@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160b13">
+  <meta name="description" content="A little world of love, made for REEM.">
+  <title>REEM — A Little World of Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="REEM home">R<span>.</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#little-world" class="nav-link">Little World</a>
+      <a href="#love-notes" class="nav-link">Love Notes</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+    </nav>
+    <a class="header-note" href="#secret">A little secret <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal"><span class="eyebrow-line"></span> A LITTLE UNIVERSE, JUST FOR YOU <span class="eyebrow-line"></span></p>
+        <h1 class="hero-title" aria-label="REEM"><span>R</span><span>E</span><span>E</span><span>M</span></h1>
+        <div class="message-stage" aria-live="off">
+          <p class="love-message" id="love-message">You make my world feel like a dream.</p>
+          <span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span>
+        </div>
+        <div class="hero-rule" aria-hidden="true"><span></span></div>
+        <p class="hero-copy reveal">Some feelings deserve a world of their own.</p>
+        <a class="button button-primary reveal" href="#little-world">Discover your world <span class="button-arrow">↘</span></a>
+      </div>
+      <div class="hero-bottom"><span>MADE WITH A LITTLE EXTRA HEART</span><a href="#little-world" aria-label="Scroll down" class="scroll-cue"><span></span></a><span>SCROLL TO EXPLORE</span></div>
+    </section>
+
+    <section class="intro section section-pad" id="little-world">
+      <div class="section-kicker reveal"><span>01</span><span class="kicker-line"></span><span>THE WORLD OF REEM</span></div>
+      <div class="intro-grid">
+        <div class="intro-heading reveal">
+          <p class="overline">A name that feels like poetry</p>
+          <h2>A little world,<br><em>made brighter</em><br>by one name.</h2>
+        </div>
+        <div class="intro-side reveal">
+          <div class="sparkle-mark" aria-hidden="true">✳</div>
+          <p class="body-large">Some names are more than letters. They become a favorite thought, a quiet smile, a little light that finds its way into an ordinary day.</p>
+          <p class="muted-copy">And this little corner of the universe has one name written across its stars.</p>
+          <span class="signature">For REEM, always <span>♡</span></span>
+        </div>
+      </div>
+      <div class="wide-quote reveal"><span class="quote-mark">“</span><p>In a universe full of beautiful things,<br><em>somehow, you are the one I notice.</em></p><span class="quote-star">✦</span></div>
+    </section>
+
+    <section class="notes section section-pad" id="love-notes">
+      <div class="section-kicker reveal"><span>02</span><span class="kicker-line"></span><span>SMALL THOUGHTS, BIG FEELINGS</span></div>
+      <div class="section-heading reveal">
+        <p class="overline">A few words for you</p>
+        <h2>Little love <em>notes.</em></h2>
+        <p class="section-description">Tiny reminders, wrapped in a little bit of magic.</p>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card note-rose reveal" tabindex="0">
+          <span class="note-number">NOTE Nº 01</span><span class="note-icon">✧</span>
+          <p>You make ordinary moments feel <em>extraordinary.</em></p>
+          <span class="note-bottom">A THOUGHT FOR YOU <span>♡</span></span>
+        </article>
+        <article class="note-card note-plum reveal" tabindex="0">
+          <span class="note-number">NOTE Nº 02</span><span class="note-icon">☾</span>
+          <p>Some names simply make the <em>heart smile.</em></p>
+          <span class="note-bottom">A THOUGHT FOR YOU <span>♡</span></span>
+        </article>
+        <article class="note-card note-gold reveal" tabindex="0">
+          <span class="note-number">NOTE Nº 03</span><span class="note-icon">✦</span>
+          <p>The smallest thought of you can brighten an <em>entire day.</em></p>
+          <span class="note-bottom">A THOUGHT FOR YOU <span>♡</span></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="secret-section section section-pad" id="secret">
+      <div class="secret-panel reveal">
+        <div class="secret-decoration" aria-hidden="true"><span>✧</span><span>✦</span><span>✧</span></div>
+        <p class="overline">Psst… this one's for you</p>
+        <h2>A little secret<br><em>for REEM.</em></h2>
+        <p class="secret-intro">Some words are sweeter when you discover them yourself.</p>
+        <button class="button button-outline" id="secret-button" aria-expanded="false" aria-controls="secret-message">Open your little secret <span class="button-arrow">↗</span></button>
+        <div class="secret-message" id="secret-message" hidden>
+          <span class="secret-heart" aria-hidden="true">♡</span>
+          <p>If I could give you one thing, it would be the chance to see yourself through my eyes — so you could understand just how special you are.</p>
+          <button class="text-button" id="close-secret">Keep this close <span>↑</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section section-pad" id="gallery">
+      <div class="section-kicker reveal"><span>03</span><span class="kicker-line"></span><span>A GALLERY OF FEELINGS</span></div>
+      <div class="gallery-heading reveal">
+        <div><p class="overline">Little moments of wonder</p><h2>Made of <em>stardust.</em></h2></div>
+        <p class="section-description">Not memories from the past — just little scenes imagined for a beautiful story yet to unfold.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="art-card art-card-tall reveal" data-art="A universe of quiet wonder." aria-label="Reveal artwork: A universe of quiet wonder">
+          <span class="art-orb"></span><span class="art-spark art-spark-one">✦</span><span class="art-spark art-spark-two">✧</span><span class="art-label">01 / WONDER</span><span class="art-caption">A universe of quiet wonder.</span>
+        </button>
+        <button class="art-card art-card-flower reveal" data-art="A little bloom in the dark." aria-label="Reveal artwork: A little bloom in the dark">
+          <span class="flower-shape"></span><span class="art-label">02 / BLOOM</span><span class="art-caption">A little bloom in the dark.</span>
+        </button>
+        <button class="art-card art-card-sunset reveal" data-art="The sky keeps a little gold for you." aria-label="Reveal artwork: The sky keeps a little gold for you">
+          <span class="sunset-sun"></span><span class="sunset-horizon"></span><span class="art-label">03 / GOLDEN HOUR</span><span class="art-caption">The sky keeps a little gold for you.</span>
+        </button>
+      </div>
+      <p class="gallery-hint"><span>✧</span> TAP AN ARTWORK TO DISCOVER ITS MESSAGE</p>
+    </section>
+
+    <section class="forever section section-pad">
+      <div class="forever-content reveal">
+        <p class="overline">And one last thing…</p>
+        <button class="heart-button" id="heart-button" aria-label="Tap the heart to reveal a message"><span class="heart-glow"></span><span class="heart-symbol">♡</span></button>
+        <p class="heart-hint" id="heart-hint">A little heartbeat, just for you</p>
+        <h2>REEM, you are<br><em>a beautiful thought.</em></h2>
+        <p class="forever-copy">No matter how many words I write,<br>you will always be my favorite.</p>
+        <button class="text-button back-top" id="back-top">Back to the beginning <span>↑</span></button>
+      </div>
+      <div class="footer-line"><span>FOR REEM, WITH LOVE</span><span>MADE OF STARDUST & SOFT THOUGHTS</span><span>♡</span></div>
+    </section>
+  </main>
+
+  <div class="art-toast" id="art-toast" role="status" aria-live="polite"></div>
+  <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
